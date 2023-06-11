@@ -10,7 +10,7 @@ window.addEventListener('load', () => {
 
     async function data(){
         const data = {"email": email.value, "clave": password.value};
-        const url = 'http://localhost:2000/api/Usuario';
+        const url = 'http://www.gowyreclamos.somee.com/api/Usuario'; //'http://localhost:2000/api/Usuario';
         await fetch(url,{
             'method': 'POST',
             'headers': {

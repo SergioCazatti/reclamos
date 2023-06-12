@@ -9,6 +9,7 @@ jQuery(document).ready(function($) {
 let idUsuario = sessionStorage.getItem('p2'); // id de usuario
 const urlBase = 'https://www.gowyreclamos.somee.com/'; 
 //const urlBase = "http://localhost:2000/";
+// const urlBase = "http://localhost:59832/";
 accionesTarjetas();
 
 function validar(){

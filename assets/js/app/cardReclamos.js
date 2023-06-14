@@ -76,14 +76,14 @@ const modalEnviarNovedad = (codigo) => {
     });
 }
 
-// const actualizarNovedad = async (codigoReclamo, textoNovedad) => {
-//     const api = "api/Reclamos";
-//     const url = urlBase + api;
-//     const data = {"codigoReclamo": codigoReclamo, "mensaje": textoNovedad, "idUsuario": idUsuario};
-//     const metodo = "POST";
-//     const respuesta = await loadInfo(url, metodo, data);
-//     console.log(respuesta);
-// }
+const actualizarNovedad = async (codigoReclamo, textoNovedad) => {
+    const api = "api/Reclamos";
+    const url = urlBase + api;
+    const data = {"codigoReclamo": codigoReclamo, "mensaje": textoNovedad, "idUsuario": idUsuario};
+    const metodo = "POST";
+    const respuesta = await loadInfo(url, metodo, data);
+    console.log(respuesta);
+}
 
 const loadInfo = async (url, metodo, data) => {
     const response = await fetch(url,{
@@ -133,7 +133,7 @@ function recorrerArrayClientes(clientesARecorrer){
                         <div class="card-footer">
                             <div class="row d-flex justify-content-between">
                                 <div class="fa-hover">
-                                    <button id="boton${p.codigo}" class="btn btn-primary mb-1" data-toggle="modal" >
+                                    <button id="boton${p.codigo}" class="btn btn-lg btn-primary mb-1" data-toggle="modal" >
                                         <i class="fa fa-comments-o m-2"></i>
                                         Novedades...
                                     </button>                                    

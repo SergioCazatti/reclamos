@@ -8,60 +8,31 @@ window.addEventListener('load', () => {
     let alerta = document.getElementById('alerta');
 
 
-    // async function data(){
-    //     const data = {"email": email.value, "clave": password.value};
-    //     //const url = 'https://www.gowyreclamos.somee.com/api/Usuario'; 
-    //     //const url = 'http://localhost:2000/api/Usuario';
-    //     const url = 'http://localhost:59832/api/Usuario';
-    //     await fetch(url,{
-    //         'method': 'POST',
-    //         'mode': 'no-cors',
-    //         'headers': {
-    //             'Content-Type': 'text/plain',//'application/json',
-    //         },
-    //         'body': JSON.stringify(data),
-    //     })
-    //     .then(response => response.json())
-    //     .then(datoss => {
-    //         if (datoss.activo === true){
-    //             const login = guardarEnStore(datoss.eMail + datoss.password, datoss.nombreUsuario, datoss.pathImagen, datoss.idUsuario);
-    //             location.href='card-reclamos.html';
-    //         }else{
-    //             mostrarAlerta();
-    //         }
-         
-    //     });
-    // }
-
     async function data(){
         const data = {"email": email.value, "clave": password.value};
         //const url = 'https://www.gowyreclamos.somee.com/api/Usuario'; 
         //const url = 'http://localhost:2000/api/Usuario';
-        const url = 'http://localhost:59832/api/Usuario';
+        const url = 'https://localhost:44329/api/Usuario';
         await fetch(url,{
-            'method': 'GET',
-            'mode': 'no-cors',
+            'method': 'POST',
+            'mode': 'cors',
             'headers': {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify(data),
+            'body': JSON.stringify(data),
         })
-        debugger;
         .then(response => response.json())
-        .then(data => console.log(data))
-        .catch(error => console.log("error"));
-
-        // .then(response => response.json())
-        // .then(datoss => {
-        //     if (datoss.activo === true){
-        //         const login = guardarEnStore(datoss.eMail + datoss.password, datoss.nombreUsuario, datoss.pathImagen, datoss.idUsuario);
-        //         location.href='card-reclamos.html';
-        //     }else{
-        //         mostrarAlerta();
-        //     }
+        .then(datoss => {
+            if (datoss.activo === true){
+                const login = guardarEnStore(datoss.eMail + datoss.password, datoss.nombreUsuario, datoss.pathImagen, datoss.idUsuario);
+                location.href='card-reclamos.html';
+            }else{
+                mostrarAlerta();
+            }
          
-        // });
+        });
     }
+
 
     boton.addEventListener('click', (e) => {
         e.preventDefault();

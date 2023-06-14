@@ -7,9 +7,8 @@ jQuery(document).ready(function($) {
 });			
 
 let idUsuario = sessionStorage.getItem('p2'); // id de usuario
-//const urlBase = 'https://www.gowyreclamos.somee.com/'; 
-//const urlBase = "http://localhost:2000/";
- const urlBase = "http://localhost:59832/";
+const urlBase = 'https://www.gowyreclamos.somee.com/'; 
+//const urlBase = "https://localhost:44329/";
 accionesTarjetas();
 
 function validar(){
@@ -77,14 +76,14 @@ const modalEnviarNovedad = (codigo) => {
     });
 }
 
-const actualizarNovedad = async (codigoReclamo, textoNovedad) => {
-    const api = "api/Reclamos";
-    const url = urlBase + api;
-    const data = {"codigoReclamo": codigoReclamo, "mensaje": textoNovedad, "idUsuario": idUsuario};
-    const metodo = "POST";
-    const respuesta = await loadInfo(url, metodo, data);
-    console.log(respuesta);
-}
+// const actualizarNovedad = async (codigoReclamo, textoNovedad) => {
+//     const api = "api/Reclamos";
+//     const url = urlBase + api;
+//     const data = {"codigoReclamo": codigoReclamo, "mensaje": textoNovedad, "idUsuario": idUsuario};
+//     const metodo = "POST";
+//     const respuesta = await loadInfo(url, metodo, data);
+//     console.log(respuesta);
+// }
 
 const loadInfo = async (url, metodo, data) => {
     const response = await fetch(url,{
@@ -168,7 +167,7 @@ function recorrerArrayClientes(clientesARecorrer){
         <a class="nav-link" href="index.html"><i class="fa fa-power-off"></i>Logout</a>
     </div>          
     `;  
-    avatar.appendChild(newImagenAvatar);
+    avatar.appendChild(newImagenAvatar); 
 }
 
 

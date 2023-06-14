@@ -7,10 +7,10 @@ function menu(){
 	menu.innerHTML = `
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active">
+                    <li >
                         <a href="index.html"><i class="menu-icon fa fa-laptop"></i>Panel de Control </a>
                     </li>
-                    <li class="menu-title">CLIENTES</li><!-- /.menu-title -->
+                    <li class="menu-title">CLIENTES</li>
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-th"></i>Reclamos</a>
                         <ul class="sub-menu children dropdown-menu">
@@ -19,7 +19,7 @@ function menu(){
                         </ul>
                     </li>                    
                 </ul>
-            </div><!-- /.navbar-collapse -->
+            </div>
 	`;
 	divMenu.appendChild(menu);
 	

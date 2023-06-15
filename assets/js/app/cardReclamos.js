@@ -7,8 +7,8 @@ jQuery(document).ready(function($) {
 });			
 
 let idUsuario = sessionStorage.getItem('p2'); // id de usuario
-const urlBase = 'https://www.gowyreclamos.somee.com/'; 
-//const urlBase = "https://localhost:44329/";
+//const urlBase = 'https://www.gowyreclamos.somee.com/'; 
+const urlBase = "https://localhost:44329/";
 accionesTarjetas();
 
 function validar(){
@@ -66,7 +66,7 @@ const modalEnviarNovedad = (codigo) => {
     </div>`;
 
     modalNovedad.appendChild(pantallaModal);
-    $("#pantallaModal").modal("show");
+    jQuery('#pantallaModal').modal('show');
     const botonEnviarNovedad = document.getElementById('enviarNovedad');
     botonEnviarNovedad.addEventListener("click", () => {
         const textoNovedad = document.getElementById('textoNovedad');
@@ -74,6 +74,7 @@ const modalEnviarNovedad = (codigo) => {
         console.log('antes de armar tarjetas')
         armarTarjetas("");
     });
+
 }
 
 const actualizarNovedad = async (codigoReclamo, textoNovedad) => {
@@ -113,7 +114,7 @@ async function armarTarjetas(filtro) {
 
 function recorrerArrayClientes(clientesARecorrer){
     const tarjeta = document.getElementById("tarjetas");
-    tarjeta.innerHTML = "";
+    tarjeta.innerHTML = " ";
 
     clientesARecorrer.forEach((p)=>{
         console.log(p);

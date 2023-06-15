@@ -10,8 +10,8 @@ window.addEventListener('load', () => {
 
     async function data(){
         const data = {"email": email.value, "clave": password.value};
-        const url = 'https://www.gowyreclamos.somee.com/api/Usuario'; 
-        //const url = 'https://localhost:44329/api/Usuario';
+        //const url = 'https://www.gowyreclamos.somee.com/api/Usuario'; 
+        const url = 'https://localhost:44329/api/Usuario';
         await fetch(url,{
             'method': 'POST',
             'mode': 'cors',

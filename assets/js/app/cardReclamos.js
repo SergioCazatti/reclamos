@@ -7,8 +7,8 @@ jQuery(document).ready(function($) {
 });			
 
 let idUsuario = sessionStorage.getItem('p2'); // id de usuario
-//const urlBase = 'https://www.gowyreclamos.somee.com/'; 
-const urlBase = "https://localhost:44329/";
+const urlBase = 'https://www.gowyreclamos.somee.com/'; 
+//const urlBase = "https://localhost:44329/";
 accionesTarjetas();
 
 function validar(){

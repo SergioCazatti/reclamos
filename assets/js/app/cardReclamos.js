@@ -122,10 +122,12 @@ function recorrerArrayClientes(clientesARecorrer){
         newDivTarjeta.classList.add("col-md-4", "mb-");
 
         newDivTarjeta.innerHTML = `
-                    <div class="card">
+                    <div class="card border border-secondary">
                         <div class="card-header">
                             <h6>#: <span id="codigoReclamo">${p.codigo}</span></h6>
-                            <strong class="card-title">${p.nombre}<small><span class="badge badge-danger float-right mt-1">${p.fechaReclamo}</span></small></strong>
+                            <strong class="card-title">${p.nombre}
+                            <span class="badge badge-warning float-right mt-1">${p.fechaReclamo}</span>
+                            </strong>
                             <label class="fs-6">${p.domicilio}</label>
                         </div>
                         <div class="card-body">
@@ -134,9 +136,9 @@ function recorrerArrayClientes(clientesARecorrer){
                         <div class="card-footer">
                             <div class="row d-flex justify-content-between">
                                 <div class="fa-hover">
-                                    <button id="boton${p.codigo}" class="btn btn-lg btn-primary mb-1" data-toggle="modal" >
+                                    <button id="boton${p.codigo}" class="btn btn-lg btn-success  mb-1" data-toggle="modal" >
                                         <i class="fa fa-comments-o m-2"></i>
-                                        Novedades...
+                                        Finalizar...
                                     </button>                                    
                                 </div>
                                 <div class="fa-hover">

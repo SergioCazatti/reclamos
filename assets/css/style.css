@@ -1288,6 +1288,7 @@ header .form-inline {
       padding-top: 5px;
       text-transform: capitalize; }
     .card .card-top button,
+/*    
     .card .card-footer button {
       background: none;
       border: none;
@@ -1296,6 +1297,12 @@ header .form-inline {
       color: #868e96;
       font-size: 12px;
       padding: 0 5px; }
+*/  
+
+    .card .card-footer button {
+      font-size: 16px;
+      padding: 0 5px; }
+
     .card .card-top[class*="bg"] .card-title,
     .card .card-footer[class*="bg"] .card-title {
       color: #fff; }
